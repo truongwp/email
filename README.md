@@ -7,7 +7,7 @@ Use composer to include the library:
 
 ## Usage
 
-`
+```php
 /**
  * Class ExampleEmail
  */
@@ -64,4 +64,4 @@ class ExampleEmail extends Truongwp\Email {
 $email = new ExampleEmail();
 $email->replace( '%%customer_name%%', 'Truong' );
 $email->send( 'truongwp@gmail.com' );
-`
+```
