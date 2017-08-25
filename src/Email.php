@@ -107,7 +107,7 @@ abstract class Email {
 	 * @param string $find    String needs to be replaced.
 	 * @param string $replace Replaced string.
 	 */
-	protected function replace( $find, $replace ) {
+	public function replace( $find, $replace ) {
 		$this->replaces[ $find ] = $replace;
 	}
 
