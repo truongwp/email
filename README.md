@@ -3,7 +3,10 @@ An abstract class for email sending in WordPress.
 ## Installation
 
 Use composer to include the library:
-`composer require truongwp/email`
+
+`
+composer require truongwp/email="*"
+`
 
 ## Usage
 
