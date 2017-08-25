@@ -4,7 +4,7 @@
  *
  * @package Truongwp
  * @author Truong Giang <truongwp@gmail.com>
- * @version 0.1.0
+ * @version 1.0.0
  */
 
 namespace Truongwp;
