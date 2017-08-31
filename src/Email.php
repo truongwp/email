@@ -158,11 +158,9 @@ abstract class Email {
 	/**
 	 * Gets email content.
 	 *
-	 * @access protected
-	 *
 	 * @return string
 	 */
-	protected function get_content() {
+	public function get_content() {
 		$content = $this->content_header() . $this->content_body() . $this->content_footer();
 
 		if ( $this->replaces ) {
