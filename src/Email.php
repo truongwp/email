@@ -29,6 +29,13 @@ abstract class Email {
 	protected $replaces = array();
 
 	/**
+	 * Prefix for hooks.
+	 *
+	 * @var string
+	 */
+	protected $prefix = 'truongwp_';
+
+	/**
 	 * Email constructor.
 	 */
 	public function __construct() {
@@ -130,7 +137,7 @@ abstract class Email {
 		 *
 		 * @param Email $email Email object.
 		 */
-		do_action( 'truongwp_email_before_sending', $this );
+		do_action( "{$this->prefix}email_before_sending", $this );
 
 		wp_mail( $recipent, $this->subject(), $content, $this->headers(), $this->attachments() );
 
@@ -141,7 +148,7 @@ abstract class Email {
 		 *
 		 * @param Email $email Email object.
 		 */
-		do_action( 'truongwp_email_after_sending', $this );
+		do_action( "{$this->prefix}email_after_sending", $this );
 
 		if ( $this->html ) {
 			remove_filter( 'wp_mail_content_type', array( $this, 'content_type_html' ) );
